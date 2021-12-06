@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
+
+Необходимо сделать так, чтобы функция вернула число, например выражение
+`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
+
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+  <script>
+    "use strict";
+
+    console.log(getSum(12, 23));
+    console.log(getDiff(4, 2));
+    console.log(getDiff(3, 5));
+    console.log(getDiff(-10, -10));
+    console.log(getMult(-2, 50));
+    console.log(getDivision(9, 3));
+
+    /**
+     * Складывает два числа.
+     * @param {number} num1 - Первое число.
+     * @param {number} num2 - Второе число. 
+     */
+    function getSum(num1, num2) {
+      return num1 + num2;
+    }
+
+    /**
+     * Находит разность двух чисел.
+     * @param {number} num1
+     * @param {number} num2
+     * @returns {number} Возвращает разность большего числа и меньшего.
+     */
+    function getDiff(num1, num2) {
+      if (num1 > num2) {
+        return num1 - num2;
+      }
+      else if (num1 < num2) {
+        return num2 - num1;
+      } else {
+        return 0;
+      }
+    }
+
+    /**
+     * @param {number} num1
+     * @param {number} num2
+     * @description Перемножает 2 числа.
+     */
+    function getMult(num1, num2) {
+      return num1 * num2
+    }
+
+    /**
+     * @author Tweenitwits
+     * Делит 2 числа.
+     * @param {number} num1
+     * @param {number} num2
+     */
+    function getDivision(num1, num2) {
+      return num1 / num2;
+    }
+
+  </script>
+</body>
+
+</html>
